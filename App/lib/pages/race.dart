@@ -4,12 +4,49 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter/cupertino.dart';
 
-class Race extends StatelessWidget {
-  const Race({super.key, required this.chosen});
+List<CarModel> mainCarList = [
+  CarModel("default", "dummy_car",0.0, 0, 0,["","",""]),
+  CarModel("default", "dummy_car",0.0, 0, 0,["","",""])
+];
 
-  final CarModel chosen;
+void resetCars() {
+  mainCarList[0] = CarModel("default", "dummy_car",0.0, 0, 0,["","",""]);
+  mainCarList[1] = CarModel("default", "dummy_car",0.0, 0, 0,["","",""]);
+}
+
+
+class RacePage extends StatefulWidget {
+  const RacePage({Key? key, required this.carsent, required this.car, required this.button}): super(key: key);
+
+  final bool carsent;
+  final int button;
+  final CarModel car;
 
   @override
+  State<RacePage> createState() => _RacePageState();
+}
+
+
+
+class _RacePageState extends State<RacePage> {
+  Future<void> getCar(BuildContext context, button) async {
+    // Navigator.push returns a Future that completes after calling
+    // Navigator.pop on the Selection Screen.
+    if (button == 1){
+      mainCarList[0] = await Navigator.push(
+        context,
+        CupertinoPageRoute(builder: (context) =>   ExplorePage(selecting: true, button: 1, currentCar: mainCarList[0],)),);
+        setState(() {});
+    } else {
+      mainCarList[1] = await Navigator.push(
+      context,
+      CupertinoPageRoute(builder: (context) =>  ExplorePage(selecting: true, button: 2, currentCar: mainCarList[1],)),);
+      setState(() {});
+    }
+  }
+
+  @override
+
   Widget build(BuildContext context) {
     return  Scaffold(
       appBar: appBar(context),
@@ -20,10 +57,7 @@ class Race extends StatelessWidget {
         children: [
           GestureDetector(
                 onTap: (){
-                  Navigator.push(
-                      context,
-                      CupertinoPageRoute(builder: (context) => const ExplorePage()),
-                  );
+                  getCar(context, 1);
                 },
                 child: Container(
                   width: 350,
@@ -43,16 +77,30 @@ class Race extends StatelessWidget {
                     ),
                   ],
                   ),
-                  child: const Text(
-                    "Select a vehicle",
+                  child:((){
+                    // ignore: unnecessary_null_comparison
+                    if (mainCarList[0].car_name != 'default') {
+                      return Text(
+                      '${mainCarList[0].car_name}',
+                    style: const TextStyle(
+                      color: Colors.black,
+                      fontSize: 25,
+                    ),);
+                    }else{
+                      return const Text(
+                      "Select a vehicle",
                     style:TextStyle(
                       color: Colors.black,
                       fontSize: 25,
-                    ),),
+                    ),);
+                    }
+                  }())
+      
                 ),
               ),
               GestureDetector(
                 onTap: (){
+                  getCar(context, 2);
                 },
                 child: Container(
                   width: 350,
@@ -72,12 +120,24 @@ class Race extends StatelessWidget {
                     ),
                   ],
                   ),
-                  child: const Text(
-                    "Select a vehicle",
+                  child: ((){
+                    // ignore: unnecessary_null_comparison
+                    if (mainCarList[1].car_name != 'default') {
+                      return Text(
+                      '${mainCarList[1].car_name}',
+                    style: const TextStyle(
+                      color: Colors.black,
+                      fontSize: 25,
+                    ),);
+                    }else{
+                      return const Text(
+                      "Select a vehicle",
                     style:TextStyle(
                       color: Colors.black,
                       fontSize: 25,
-                    ),),
+                    ),);
+                    }
+                  }())
                 ),
               ),
               GestureDetector(
@@ -115,6 +175,8 @@ class Race extends StatelessWidget {
   }
 }
 
+
+
 AppBar appBar(context) {
     return AppBar(
       title: const Text
@@ -132,6 +194,7 @@ AppBar appBar(context) {
       leading: GestureDetector(
         onTap: (){
           Navigator.pop(context);
+          resetCars();
         },
         child: Container(
           margin: const EdgeInsets.all(10),

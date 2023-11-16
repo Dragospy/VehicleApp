@@ -44,7 +44,7 @@ class HomePage extends StatelessWidget {
                 onTap: () {
                   Navigator.push(
                       context,
-                      CupertinoPageRoute(builder: (context) => const ExplorePage()),
+                      CupertinoPageRoute(builder: (context) =>  ExplorePage(selecting: false, button: 0,currentCar: selectedCars[0],)),
                   );
                 },
                 child: Container(
@@ -77,7 +77,7 @@ class HomePage extends StatelessWidget {
                 onTap: (){
                   Navigator.push(
                       context,
-                      CupertinoPageRoute(builder: (context) =>  Race(chosen: selectedCars[0],)),
+                      CupertinoPageRoute(builder: (context) =>  RacePage(carsent: false, car:selectedCars[0], button: 0)),
                   );
                 },
                 child: Container(

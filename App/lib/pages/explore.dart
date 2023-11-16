@@ -1,20 +1,24 @@
 
 import 'package:coolapp/model/car_model.dart';
 import 'package:coolapp/pages/carDisplay.dart';
+import 'package:coolapp/pages/race.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/cupertino.dart';
 
 class ExplorePage extends StatefulWidget {
-  const ExplorePage({Key? key}): super(key: key);
+  const ExplorePage({Key? key, required this.selecting, required this.button, required this.currentCar}): super(key: key);
+
+  final bool selecting;
+  final int button;
+  final CarModel currentCar;
 
   @override
   State<ExplorePage> createState() => _ExplorePageState();
 }
 
 class _ExplorePageState extends State<ExplorePage> {
-  bool selecting = false;
 
   static List<CarModel> mainCarList = [
     CarModel("Porsche 911 Turbo S", "https://files.porsche.com/filestore/image/multimedia/none/911-tus-modelimage-sideshot/model/930894f1-6214-11ea-80c8-005056bbdc38/porsche-model.png", 2.6, 641, 800,["https://pictures.porsche.com/rtt/iris?COSY-EU-100-1711coMvsi60AAt5FwcmBEgA4qP8iBUDxPE3Cb9pNXABuN9dMGF4tl3U0%25z8rMbjAuWghMVEe61O3er0geLWjzwHlQaKf2GLmB0SPQrIgQuMNYw3x4x7Jv5c0jQvpjs7oW1fGVb2rEUA6efcRHvc","https://pictures.porsche.com/rtt/iris?COSY-EU-100-1711coMvsi60AAt5FwcmBEgA4qP8iBUDxPE3Cb9pNXABuN9dMGF4tl3U0%25z8rMbjUuWghMVEe61O3er0geLWjzwHlQaKf2GLmB0SPQrIgQuMNYw3x4x7Jv5c0jQvpjs7oW1fGVb2rEUA6efcRHvc","https://pictures.porsche.com/rtt/iris?COSY-EU-100-1711coMvsi60AAt5FwcmBEgA4qP8iBUDxPE3Cb9pNXABuN9dMGF4tl3U5Yz8rMHIspMtwZaiJQP0iO5Mi1pHcTCkFKGXoq1S95r6FObMFswRuT02g2dEhev5HFhLHnd7pQXqZYoOaD8JiXvBChv"]),
@@ -23,6 +27,7 @@ class _ExplorePageState extends State<ExplorePage> {
   ];
   
   List<CarModel> displayList = List.from(mainCarList);
+  
 
   void updateList(String value){
     setState((){
@@ -33,13 +38,13 @@ class _ExplorePageState extends State<ExplorePage> {
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
-      appBar: appBar(context),
+      appBar: appBar(context,widget.selecting, widget.currentCar),
       backgroundColor: Colors.white,
-      body: searchBox()
+      body: searchBox(widget.selecting, widget.button)
     );
   }
 
-  Column searchBox() {
+  Column searchBox(selecting, button) {
     return Column(
       mainAxisAlignment:MainAxisAlignment.start,
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -114,10 +119,7 @@ class _ExplorePageState extends State<ExplorePage> {
               }else{
                 SystemChannels.textInput.invokeMethod('TextInput.hide');
                 Future.delayed(const Duration(milliseconds: 150), (){
-                Navigator.push(
-                  context,
-                  CupertinoPageRoute(builder: (context) => CarDisplay(car: displayList[index])),
-                  );
+                   Navigator.pop(context, displayList[index]);
                 });
               }
             },
@@ -145,7 +147,7 @@ class _ExplorePageState extends State<ExplorePage> {
   }
 }
 
-AppBar appBar(context) {
+AppBar appBar(context,selecting,currentCar) {
     return AppBar(
       title: const Text
       ('Explore',
@@ -161,13 +163,19 @@ AppBar appBar(context) {
       centerTitle: true,
       leading: GestureDetector(
         onTap: (){
-          SystemChannels.textInput.invokeMethod('TextInput.hide');
-          Future.delayed(const Duration(milliseconds: 150), (){
-             Navigator.pop(
-          context,
- );
-          });
-        },
+              if (selecting == false) {
+              SystemChannels.textInput.invokeMethod('TextInput.hide');
+                Future.delayed(const Duration(milliseconds: 150), (){
+                Navigator.pop(
+                  context,);
+                });
+              }else{
+                SystemChannels.textInput.invokeMethod('TextInput.hide');
+                Future.delayed(const Duration(milliseconds: 150), (){
+                   Navigator.pop(context, currentCar);
+                });
+              }
+            },
         child: Container(
           margin: const EdgeInsets.all(10),
           alignment: Alignment.center,
