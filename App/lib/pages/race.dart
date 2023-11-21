@@ -44,10 +44,11 @@ class _RacePageState extends State<RacePage> {
       setState(() {});
     }
   }
+  
 
   @override
 
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context,) {
     return  Scaffold(
       appBar: appBar(context),
       backgroundColor: Colors.white,
@@ -80,12 +81,41 @@ class _RacePageState extends State<RacePage> {
                   child:((){
                     // ignore: unnecessary_null_comparison
                     if (mainCarList[0].car_name != 'default') {
-                      return Text(
-                      '${mainCarList[0].car_name}',
-                    style: const TextStyle(
-                      color: Colors.black,
-                      fontSize: 25,
-                    ),);
+                      return Row(
+                        mainAxisAlignment:MainAxisAlignment.start,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Container(
+                            margin: const EdgeInsets.only(left: 20,right: 20),
+                            child: Image.network(mainCarList[0].car_image_url!) ,
+                          ),
+                          Column(
+                            children: [
+                              Container(
+                                margin: const EdgeInsets.only(left: 10,right: 20,top: 10),
+                                child:Text(
+                                '${mainCarList[0].car_name}', 
+                                  style: const TextStyle(
+                                    color: Colors.black, 
+                                    fontSize: 15.0, 
+                                    fontWeight: FontWeight.bold
+                                  ),
+                                )
+                              ),
+                              Text(
+                                '0-60: ${mainCarList[0].car_acceleration!} BHP: ${mainCarList[0].car_bhp!} Torque: ${mainCarList[0].torque!}', 
+                                style: const TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 12.0, 
+                                  fontWeight: FontWeight.bold
+                                )
+                                  ),
+                            ],
+
+                          )
+                        ],
+
+                      );
                     }else{
                       return const Text(
                       "Select a vehicle",
@@ -123,12 +153,42 @@ class _RacePageState extends State<RacePage> {
                   child: ((){
                     // ignore: unnecessary_null_comparison
                     if (mainCarList[1].car_name != 'default') {
-                      return Text(
-                      '${mainCarList[1].car_name}',
-                    style: const TextStyle(
-                      color: Colors.black,
-                      fontSize: 25,
-                    ),);
+                      return Row(
+                        mainAxisAlignment:MainAxisAlignment.start,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Container(
+                            margin: const EdgeInsets.only(left: 20,right: 20),
+                            child: Image.network(mainCarList[1].car_image_url!) ,
+                          ),
+                          Column(
+                            children: [
+                              Container(
+                                margin: const EdgeInsets.only(left: 10,right: 20,top: 10),
+                                child:Text(
+                                '${mainCarList[1].car_name}', 
+                                  style: const TextStyle(
+                                    color: Colors.black, 
+                                    fontSize: 15.0, 
+                                    fontWeight: FontWeight.bold
+                                  ),
+                                )
+                              ),
+                              Text(
+                                '0-60: ${mainCarList[1].car_acceleration!} BHP: ${mainCarList[1].car_bhp!} Torque: ${mainCarList[1].torque!}', 
+                                style: const TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 12.0, 
+                                  fontWeight: FontWeight.bold
+                                )
+                                  ),
+                            ],
+
+                          )
+                        ],
+
+                      );
+
                     }else{
                       return const Text(
                       "Select a vehicle",
