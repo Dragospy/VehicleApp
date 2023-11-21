@@ -9,7 +9,7 @@ class HomePage extends StatelessWidget {
   const HomePage({super.key});
 
   static List<CarModel> selectedCars = [
-    CarModel("dummy_car", "dummy_car",0.0, 0, 0,["","",""]),
+    CarModel("default", "dummy_car",0.0, 0, 0,["","",""]),
   ];
 
   @override
@@ -77,7 +77,7 @@ class HomePage extends StatelessWidget {
                 onTap: (){
                   Navigator.push(
                       context,
-                      CupertinoPageRoute(builder: (context) =>  RacePage(carsent: false, car:selectedCars[0], button: 0)),
+                      CupertinoPageRoute(builder: (context) =>  RacePage(carSent:false, car:selectedCars[0])),
                   );
                 },
                 child: Container(

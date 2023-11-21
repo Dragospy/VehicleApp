@@ -1,9 +1,11 @@
 // ignore_for_file: non_constant_identifier_names, file_names
 
 import 'package:coolapp/model/car_model.dart';
+import 'package:coolapp/pages/race.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:flutter/cupertino.dart';
 
 class CarDisplay extends StatelessWidget {
   const CarDisplay({super.key, required this.car});
@@ -174,6 +176,10 @@ class CarDisplay extends StatelessWidget {
               ),
               GestureDetector(
                 onTap: (){
+                  Navigator.push(
+                      context,
+                      CupertinoPageRoute(builder: (context) =>  RacePage(carSent: true,car:car)),
+                  );
                 },
                 child: Container(
                   width: 185,

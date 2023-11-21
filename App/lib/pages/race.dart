@@ -1,5 +1,6 @@
 import 'package:coolapp/model/car_model.dart';
 import 'package:coolapp/pages/explore.dart';
+import 'package:coolapp/pages/raceResults.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter/cupertino.dart';
@@ -16,10 +17,9 @@ void resetCars() {
 
 
 class RacePage extends StatefulWidget {
-  const RacePage({Key? key, required this.carsent, required this.car, required this.button}): super(key: key);
+  const RacePage({Key? key, required this.carSent,required this.car}): super(key: key);
 
-  final bool carsent;
-  final int button;
+  final bool carSent;
   final CarModel car;
 
   @override
@@ -29,6 +29,8 @@ class RacePage extends StatefulWidget {
 
 
 class _RacePageState extends State<RacePage> {
+
+
   Future<void> getCar(BuildContext context, button) async {
     // Navigator.push returns a Future that completes after calling
     // Navigator.pop on the Selection Screen.
@@ -44,11 +46,13 @@ class _RacePageState extends State<RacePage> {
       setState(() {});
     }
   }
-  
 
   @override
 
   Widget build(BuildContext context,) {
+    if (widget.carSent == true){
+      mainCarList[0] = widget.car;
+    }
     return  Scaffold(
       appBar: appBar(context),
       backgroundColor: Colors.white,
@@ -202,6 +206,12 @@ class _RacePageState extends State<RacePage> {
               ),
               GestureDetector(
                 onTap: (){
+                  if (mainCarList[0].car_name != 'default' && mainCarList[1].car_name != 'default'){
+                    Navigator.push(
+                        context,
+                        CupertinoPageRoute(builder: (context) =>  const RaceResults()),);
+                  }
+              
                 },
                 child: Container(
                   width: 200,
