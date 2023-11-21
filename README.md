@@ -45,6 +45,11 @@ Race Page:
 
 ![image](https://github.com/Dragospy/VehicleApp/assets/145191201/4d629eef-f4f0-491c-bc86-21acf68674a8)
 
+Race Page with Vehicles selected:
+
+![image](https://github.com/Dragospy/VehicleApp/assets/145191201/e3006210-3ca8-45cc-acde-4069ff57a6c5)
+
+
 I am currently still in school, so I won't have all the time in the world to work on this, but I will do my best to update this repo as often as possible.
 
 My Linkedin: https://www.linkedin.com/in/dragos-soalca-421b43237/
