@@ -2,3 +2,4 @@ App/firebase.json
 App/lib/firebase_options.dart
 App/build/
 App/.dart_tool
+App/.vscode
