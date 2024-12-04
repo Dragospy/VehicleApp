@@ -47,6 +47,10 @@ Vehicle Card Detailed (Pictures are scrollable):
 
 <img width="484" alt="image" src="https://github.com/user-attachments/assets/ce46ce62-f73f-4cb6-9b7a-d195e17ebd3d">
 
+Add Car:
+
+<img width="483" alt="image" src="https://github.com/user-attachments/assets/7061fb6e-0f9e-498b-8687-1631fe375bb5">
+
 Main Menu with Race Function:
 
 <img width="480" alt="image" src="https://github.com/user-attachments/assets/ac6da289-3c0a-4ac7-ac45-61f8ac082f92">
