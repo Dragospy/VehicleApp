@@ -47,6 +47,19 @@ Vehicle Card Detailed (Pictures are scrollable):
 
 <img width="484" alt="image" src="https://github.com/user-attachments/assets/ce46ce62-f73f-4cb6-9b7a-d195e17ebd3d">
 
+Main Menu with Race Function:
+
+<img width="480" alt="image" src="https://github.com/user-attachments/assets/ac6da289-3c0a-4ac7-ac45-61f8ac082f92">
+
+Race Page with no selected cars:
+
+<img width="488" alt="image" src="https://github.com/user-attachments/assets/e1ab7465-a2e7-4c1c-8e15-2e1fa88b8289">
+
+Race Page with cars selected:
+
+<img width="483" alt="image" src="https://github.com/user-attachments/assets/1144f89d-7df3-49c3-9a0b-a13ba259cab7">
+
+
 I am currently still in school, so I won't have all the time in the world to work on this, but I will do my best to update this repo as often as possible.
 
 My Linkedin: https://www.linkedin.com/in/dragos-soalca-421b43237/
