@@ -26,31 +26,38 @@ Future feature ideas:
 
 Main Menu:
 
-![image](https://github.com/Dragospy/VehicleApp/assets/145191201/525c0863-30e0-43d0-900b-2a442ac8fafd)
+<img width="474" alt="image" src="https://github.com/user-attachments/assets/61d29d10-a94a-4e2d-9c47-3785f24dd9da">
+
 
 Explore Page:
 
-![image](https://github.com/Dragospy/VehicleApp/assets/145191201/911c6c59-b8d8-4f5f-a60f-19d506a697ba)
+<img width="479" alt="image" src="https://github.com/user-attachments/assets/dd2b9b4f-c837-4189-9880-aea58349c0e9">
+
 
 Explore Page Filter:
 
-![image](https://github.com/Dragospy/VehicleApp/assets/145191201/28e92891-143d-42a0-a4d1-b296d74d3636)
+<img width="484" alt="image" src="https://github.com/user-attachments/assets/083df02d-ab5d-4349-a6e1-2e7b62707599">
 
 Vehicle Card Basic:
 
-![image](https://github.com/Dragospy/VehicleApp/assets/145191201/925551cd-b330-47aa-a597-48bbb17e6642)
+<img width="440" alt="image" src="https://github.com/user-attachments/assets/76ddbf82-87da-4649-b081-179efaaec2ed">
+
 
 Vehicle Card Detailed (Pictures are scrollable):
 
-![image](https://github.com/Dragospy/VehicleApp/assets/145191201/b456aea9-7551-4774-94c9-0d5e83d1ff37)
+<img width="484" alt="image" src="https://github.com/user-attachments/assets/ce46ce62-f73f-4cb6-9b7a-d195e17ebd3d">
 
-Race Page:
+Main Menu with Race Function:
 
-![image](https://github.com/Dragospy/VehicleApp/assets/145191201/4d629eef-f4f0-491c-bc86-21acf68674a8)
+<img width="480" alt="image" src="https://github.com/user-attachments/assets/ac6da289-3c0a-4ac7-ac45-61f8ac082f92">
 
-Race Page with Vehicles selected:
+Race Page with no selected cars:
 
-![image](https://github.com/Dragospy/VehicleApp/assets/145191201/e3006210-3ca8-45cc-acde-4069ff57a6c5)
+<img width="488" alt="image" src="https://github.com/user-attachments/assets/e1ab7465-a2e7-4c1c-8e15-2e1fa88b8289">
+
+Race Page with cars selected:
+
+<img width="483" alt="image" src="https://github.com/user-attachments/assets/1144f89d-7df3-49c3-9a0b-a13ba259cab7">
 
 
 I am currently still in school, so I won't have all the time in the world to work on this, but I will do my best to update this repo as often as possible.
