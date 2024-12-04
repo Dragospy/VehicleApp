@@ -34,30 +34,42 @@ Explore Page:
 <img width="479" alt="image" src="https://github.com/user-attachments/assets/dd2b9b4f-c837-4189-9880-aea58349c0e9">
 
 
+
 Explore Page Filter:
 
 <img width="484" alt="image" src="https://github.com/user-attachments/assets/083df02d-ab5d-4349-a6e1-2e7b62707599">
+
 
 Vehicle Card Basic:
 
 <img width="440" alt="image" src="https://github.com/user-attachments/assets/76ddbf82-87da-4649-b081-179efaaec2ed">
 
 
+
 Vehicle Card Detailed (Pictures are scrollable):
 
 <img width="484" alt="image" src="https://github.com/user-attachments/assets/ce46ce62-f73f-4cb6-9b7a-d195e17ebd3d">
 
-Add Car:
+
+Add Car (One or more inputs empty, and attempted to add car):
 
 <img width="483" alt="image" src="https://github.com/user-attachments/assets/7061fb6e-0f9e-498b-8687-1631fe375bb5">
+
+
+Add Car Inputs filled (Test Inputs):
+
+<img width="487" alt="image" src="https://github.com/user-attachments/assets/8fd6ce39-9e1e-427c-bc04-7ea6796a9d84">
+
 
 Main Menu with Race Function:
 
 <img width="480" alt="image" src="https://github.com/user-attachments/assets/ac6da289-3c0a-4ac7-ac45-61f8ac082f92">
 
+
 Race Page with no selected cars:
 
 <img width="488" alt="image" src="https://github.com/user-attachments/assets/e1ab7465-a2e7-4c1c-8e15-2e1fa88b8289">
+
 
 Race Page with cars selected:
 
