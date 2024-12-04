@@ -1,0 +1,1 @@
+ /Users/dragos/Documents/Development/App\ Development/Flutter/vehidex/.dart_tool/flutter_build/7cecb61c280c56fc9e438e22c226d2de/native_assets.yaml: 

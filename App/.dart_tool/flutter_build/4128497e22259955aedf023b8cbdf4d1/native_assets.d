@@ -1,0 +1,1 @@
+ /Users/dragos/Documents/GitHub/VehicleApp/.dart_tool/flutter_build/4128497e22259955aedf023b8cbdf4d1/native_assets.yaml: 

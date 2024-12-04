@@ -1,0 +1,67 @@
+{
+  "project_info": {
+    "project_number": "815444821757",
+    "project_id": "vehidex-1ac81",
+    "storage_bucket": "vehidex-1ac81.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:815444821757:android:b40b976735ce2dbab0a094",
+        "android_client_info": {
+          "package_name": "com.example.vehidex"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAcgcAWoXpWEEvvxBrVm8GPLp7y7g9ZWbU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:815444821757:android:74f3c5be119a9309b0a094",
+        "android_client_info": {
+          "package_name": "com.vehidex.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAcgcAWoXpWEEvvxBrVm8GPLp7y7g9ZWbU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:815444821757:android:f8e183e03693e87db0a094",
+        "android_client_info": {
+          "package_name": "com.vehidex.dex"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAcgcAWoXpWEEvvxBrVm8GPLp7y7g9ZWbU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
