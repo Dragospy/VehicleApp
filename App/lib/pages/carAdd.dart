@@ -89,7 +89,6 @@ class _addCarPageState extends State<addCarPage> {
                 fontSize: 25,
               ),
             ),
-            addCarButton(),
           ],
         ),
         SizedBox(
@@ -120,9 +119,10 @@ class _addCarPageState extends State<addCarPage> {
     );
   }
 
-  GestureDetector addCarButton() {
-    return GestureDetector(
-      onTap: () {
+  IconButton addCarButton() {
+    return IconButton(
+      icon: Icon(Icons.add),
+      onPressed: () {
         if (car.carName!.isEmpty ||
             car.carAcceleration!.isEmpty ||
             car.carBhp!.isEmpty ||
@@ -141,7 +141,6 @@ class _addCarPageState extends State<addCarPage> {
           displayError("");
         }
       },
-      child: button(150, 40, "Add Car")
     );
   }
 
@@ -250,6 +249,9 @@ class _addCarPageState extends State<addCarPage> {
           ),
         ),
       ),
+      actions: [
+        addCarButton(),
+      ],
     );
   }
 }
