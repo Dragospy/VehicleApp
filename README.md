@@ -2,7 +2,9 @@ This is my first attempt at making a mobile application
 
 I've always been intrigued by how mobile applications worked, but have never had the time nor the necessary hardware to make my own, not until now atleast
 
-This application allows users to search for different cars, look at them from different angles (Interior, back, front, etc), listen to their engine sound and even put them up against each other to see which is faster (based off of stats alone)
+This application serves as a mass collection of cars, allowing its users to search through the catalogue and inspect the different features of each car, such as BHP, 0-60 Time, Torque, etc.... It also allows its users to add new vehicles to the collection, which then go to app admins and will get approved to be showed on the main app (Approval not yet implemented, cars go straight to main collection atm)
+
+Momentarily, the race function has been removed, till I have the necessary time to implement it the algorithm that will work out the results of the races.
 
 Current impletemented features:  
   - Main menu allowing selection of either Race or Explore menu
@@ -10,12 +12,13 @@ Current impletemented features:
   - Vehicle cards that display basic vehicle details when in the explore menu
   - Vehicle cards that display vehicle information alongside scrolable pictures and options to either use this car in a race or listen to its engine
   - Race menu design complete
+  - Pulls available vehicles from a database instead of pulling them from local
+  - Allow the Select a vehicle button to open the explore page and return back with the vehicle that has been selected from the list
+  - Allow the |Race| button on the Vehicle card page to take you to the race page and add the vehicle as an option
 
 Still in the works features:
-  - Given |Engine Sound| button functionality
-  - Allow the |Race| button on the Vehicle card page to take you to the race page and add the vehicle as an option
-  - Allow the Select a vehicle button to open the explore page and return back with the vehicle that has been selected from the list
-  - Pull available vehicles from a database instead of pulling them from local
+  - Given |Engine Sound| button functionality (Cannot due to Firebase requiring the paid tier to use storage)
+  - Work out the different results of the race between the two selected cars and return it back to the user
 
 Future feature ideas:
   - Instead of pictures for every vehicle, load a 3D model that can be spun around
