@@ -18,6 +18,7 @@ Current impletemented features:
 
 Still in the works features:
   - Given |Engine Sound| button functionality (Cannot due to Firebase requiring the paid tier to use storage)
+  - Allow users to upload photos from device (Cannot due to Firebase requiring the paid tier to use storage, but may end up using a sepparate storage solution, such as a google drive, or drop box)
   - Work out the different results of the race between the two selected cars and return it back to the user
 
 Future feature ideas:
